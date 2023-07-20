@@ -661,9 +661,8 @@ hr {
 .testimonials{
   position: relative;
 }
-
-.testimonials__container {
-  row-gap: 3rem;
+.testimonials__data {
+  text-align: center;
 }
 
 .testimonials__description {
@@ -677,7 +676,8 @@ hr {
 }
 
 .wrapper-carousel {
-  margin: 4rem 5rem 0 5rem;
+  margin: 4rem auto;
+  margin-bottom: 0;
   width: 80%;
   position: relative;
 }
@@ -713,7 +713,6 @@ hr {
   grid-auto-columns: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 16px;
   border-radius: 8px;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1041,6 +1040,9 @@ hr {
     margin: 0 1.5rem 1rem 1.5rem;
   }
 
+  .testimonials__description {
+    margin: 0 1.5rem 1rem 1.5rem;
+  }
   .contact__data-img {
     right: .5rem;
   }
