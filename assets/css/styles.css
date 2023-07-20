@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Sniglet&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -11,16 +12,18 @@
   --first-color-alt: #929ee0;
   --title-color: #1A1936;
   --special-color: #3F3F46;
-  --text-color: hsl(19, 16%, 35%);
-  --text-color-light: hsl(19, 8%, 55%);
+  --text-color: hsl(244, 9%, 36%);
+  --text-color-light: hsl(240, 10%, 64%);
   --body-color: #ffffff;
   --container-color: #e3e7fa;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
-  --title-font: "Lora", serif;
-  --subtitle-font: "Dancing Script", cursive;
+  /*--title-font: "Lora", serif;
+  --subtitle-font: "Dancing Script", cursive;*/
+  --title-font: 'Sniglet', cursive;
+  --subtitle-font: 'Handlee', cursive;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -648,57 +651,174 @@ hr {
   color: var(--title-color);
   transition: .3s;
 }
+.recommend .price__img{
+  color: var(--special-color);
+  border: 1px solid var(--special-color);
+}
 
-/*=============== RECENTLY ===============*/
-.recently {
+/*=============== TESTIMONIALS ===============*/
+
+.wrapper-carousel {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper-carousel i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: var(--special-color);
+  color: var(--body-color);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper-carousel i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper-carousel i:first-child{
+  left: -22px;
+}
+.wrapper-carousel i:last-child{
+  right: -22px;
+}
+.wrapper-carousel .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  /*grid-auto-columns: calc((100% / 3) - 12px);*/
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  width: 100%;
+  list-style: none;
+  background: #b3aec5;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  background: #e1dceb;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+@media screen and (max-width: 900px) {
+  .wrapper-carousel .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper-carousel .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+
+/*=============== CONTACT ===============*/
+.contact {
   position: relative;
 }
 
-.recently__container {
+.contact__container {
   row-gap: 4rem;
 }
 
-.recently__data {
+.contact__data {
   position: relative;
   text-align: center;
 }
 
-.recently__description {
+.contact__description {
   margin-bottom: 2rem;
 }
 
-.recently__data-img {
+.contact__data-img {
   width: 25px;
   position: absolute;
-  top: 3.5rem;
+  top: 2.5rem;
   right: 1.5rem;
   transform: rotate(30deg);
 }
 
-.recently__img {
+.contact__img {
   width: 300px;
   justify-self: center;
 }
 
-.recently__leaf-1,
-.recently__leaf-2 {
+.contact__leaf-1,
+.contact__leaf-2 {
   position: absolute;
   opacity: .2;
 }
 
-.recently__leaf-1 {
+.contact__leaf-1 {
   width: 80px;
   top: 17rem;
   left: -1rem;
   transform: rotate(15deg);
 }
 
-.recently__leaf-2 {
+.contact__leaf-2 {
   width: 40px;
   right: -1rem;
   bottom: 12rem;
   transform: rotate(-30deg);
 }
+
+.contact__button{
+  margin-top: 1.5rem;
+}
+
 
 /*=============== FOOTER ===============*/
 .footer {
@@ -914,7 +1034,7 @@ hr {
     margin: 0 1.5rem 1rem 1.5rem;
   }
 
-  .recently__data-img {
+  .contact__data-img {
     right: .5rem;
   }
 
@@ -929,7 +1049,7 @@ hr {
 
   .home__container,
   .about__container,
-  .recently__container {
+  .contact__container {
     grid-template-columns: .7fr;
     justify-content: center;
   }
@@ -1064,26 +1184,26 @@ hr {
     padding-block: 3.5rem 4rem;
   }
 
-  .recently__container {
+  .contact__container {
     grid-template-columns: 380px 400px;
     align-items: center;
     column-gap: 7rem;
     padding-bottom: 2rem;
   }
 
-  .recently__data,
-  .recently .section__subtitle,
-  .recently .section__title {
+  .contact__data,
+  .contact .section__subtitle,
+  .contact .section__title {
     text-align: initial;
   }
 
-  .recently__data-img {
+  .contact__data-img {
     width: 30px;
     top: 5.5rem;
     right: -2.5rem;
   }
 
-  .recently_img {
+  .contact_img {
     width: 480px;
   }
 
@@ -1160,12 +1280,12 @@ hr {
     bottom: 3rem;
   }
 
-  .recently__leaf-1 {
+  .contact__leaf-1 {
     width: 150px;
     top: 19rem;
   }
 
-  .recently__leaf-2 {
+  .contact__leaf-2 {
     width: 100px;
     bottom: 15rem;
   }
