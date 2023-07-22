@@ -1173,11 +1173,6 @@ hr {
     width: 50px;
   }
 
-  .about__img {
-    width: 350px;
-  }
-
-
   .price__cards{
     grid-template-columns: repeat(3, 280px);
     column-gap: 3.5rem;

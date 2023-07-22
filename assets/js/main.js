@@ -104,7 +104,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 
-    logoHeader.src = [getCurrentTheme() === 'dark' ? "assets/img/logo_horizontal_2.png" : "assets/img/logo_horizontal_1.png"];
+    logoHeader.src = [getCurrentTheme() === 'dark' ? "assets/img/mathia_horizontal_darkmode.png" : "assets/img/mathia_horizontal.png"];
     logoHome.src = [getCurrentTheme() === 'dark' ? "assets/img/logo_solo_2.png" : "assets/img/logo_solo_1.png"];
 })
 
