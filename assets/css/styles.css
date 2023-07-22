@@ -460,32 +460,32 @@ body.dark-theme {
   line-height: 2;
 }
 
-.wrapper {
+.wrap {
   max-width: 1240px;
   margin-inline: auto;
   padding-inline: 1rem;
   margin-top: 2rem;
 }
 
-.wrapper__title {
+.wrap .wrapper__title {
   text-align: center;
   display: grid;
   place-items: center;
   gap: 1rem;
 }
 
-.wrapper__title h2 {
+.wrap .wrapper__title h2 {
   font-size: var(--h3-font-size);
   font-family: var(--title-font);
 }
 
-.toogle__section {
+.wrapper__title .toogle__section {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.toogle__section input {
+.wrapper__title .toogle__section input {
   display: none;
 }
 
@@ -675,14 +675,14 @@ hr {
   max-width: 1024px;
 }
 
-.wrapper-carousel {
+.wrapper {
   margin: 4rem auto;
   margin-bottom: 0;
   width: 80%;
   position: relative;
 }
 
-.wrapper-carousel i {
+.wrapper .icono-btn {
   top: 50%;
   height: 50px;
   width: 50px;
@@ -691,28 +691,29 @@ hr {
   position: absolute;
   text-align: center;
   line-height: 50px;
-  background: var(--special-color);
+  background: var(--first-color);
   color: var(--body-color);
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-.wrapper-carousel i:active{
+.wrapper .icono-btn:active{
   transform: translateY(-50%) scale(0.85);
 }
-.wrapper-carousel i:first-child{
+.wrapper .icono-btn:first-child{
   left: -22px;
 }
-.wrapper-carousel i:last-child{
+.wrapper .icono-btn:last-child{
   right: -22px;
 }
-.wrapper-carousel .carousel{
+.wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  gap: 16px;
   border-radius: 8px;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -731,44 +732,93 @@ hr {
   cursor: grab;
   user-select: none;
 }
-.carousel :where(.card, .img) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .carousel .card {
   scroll-snap-align: start;
   height: 342px;
   list-style: none;
-  background: #b3aec5;
+  background: var(--container-color);
   cursor: pointer;
   padding-bottom: 15px;
   flex-direction: column;
   border-radius: 8px;
-}
-.carousel .card .img {
-  background: #e1dceb;
-  height: 148px;
-  width: 148px;
-  border-radius: 50%;
-}
-.card .img img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-}
-.carousel .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-}
-.carousel .card span {
-  color: #6A6D78;
-  font-size: 1.31rem;
+  display: flex;
+  align-items: center;
 }
 
+.card .pictures{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+}
+
+.carousel .card .img {
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  margin: 2.2rem 1.7rem 1rem 1.7rem;
+}
+
+.card .description {
+  display: flex;
+  width: 85%;
+  color: var(--text-color);
+  font-size: 14px;
+  margin: 1rem 1.5rem;
+  padding: 0 1.5rem;
+  text-align: justify;
+}
+
+.card .stars {
+  display: flex;
+  gap: 11px;
+  margin: .2rem 1.5rem;
+}
+
+.card .stars i {
+  color: #ff9c1a;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.comment-author{
+  display: flex;
+  width: 85%;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
+.comment-author-img {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.comment-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-left: 1em;
+
+}
+
+.comment-info  .name {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.comment-info .puesto{
+  font-size: 13px;
+  color: #3c57ec;
+}
 
 /*=============== CONTACT ===============*/
 .contact {
@@ -1043,6 +1093,7 @@ hr {
   .testimonials__description {
     margin: 0 1.5rem 1rem 1.5rem;
   }
+
   .contact__data-img {
     right: .5rem;
   }
@@ -1050,9 +1101,144 @@ hr {
   .footer__content {
     gap: 1.5rem;
   }
+
+  .wrapper .icono-btn {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel .card .img {
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem 1.3rem 1rem 1.3rem;
+  }
+  .card .stars {
+    gap: 4px;
+    margin: 0 1.5rem;
+  }
+  
+  .card .stars i {
+    font-size: 13px;
+  }
+
+  .card .description{
+    font-size: 11px;
+    margin-bottom: .3rem;
+  }
+  .comment-author{
+    width: 90%;
+  }
+
+  .comment-author-img{
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 1rem;
+  }
+  .comment-author .name{
+    font-size: 11px;
+  }
+  .comment-author .puesto{
+    margin-top: .2rem;
+    font-size: 7px;
+  }
 }
 
 /* For medium devices */
+@media screen and (max-width: 440px) 
+{
+  .wrapper .icono-btn {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel .card .img {
+    width: 50px;
+    height: 50px;
+    margin: 1.5rem 1.3rem 1rem 1.3rem;
+  }
+  .card .stars {
+    gap: 10px;
+    margin: .2rem 1.5rem;
+  }
+  
+  .card .stars i {
+    font-size: 14px;
+  }
+
+  .card .description{
+    font-size: 11.5px !important;
+  }
+  .comment-author{
+    width: 85%;
+  }
+
+  .comment-author-img{
+    width: 55px !important;
+    height: 55px !important;
+    margin-right: .6rem;
+  }
+  .comment-author .name{
+    font-size: 14px !important;
+  }
+  .comment-author .puesto{
+    margin-top: .5rem;
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 576px) 
+{
+  .wrapper .icono-btn {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel .card .img {
+    width: 60px;
+    height: 60px;
+    margin: 2rem 1.3rem 1rem 1.3rem;
+  }
+  .card .stars {
+    gap: 11px;
+    margin: .2rem 1.5rem;
+  }
+  
+  .card .stars i {
+    font-size: 15px;
+  }
+
+  .card .description{
+    font-size: 13px;
+  }
+  .comment-author{
+    width: 85%;
+  }
+
+  .comment-author-img{
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: .6rem;
+  }
+  .comment-author .name{
+    font-size: 15px;
+  }
+  .comment-author .puesto{
+    margin-top: .5rem;
+    font-size: 12px;
+  }
+}
 
 @media screen and (min-width: 576px) {
 
@@ -1066,6 +1252,8 @@ hr {
   .footer__content {
     grid-template-columns: repeat(3, max-content);
   }
+
+ 
 }
 
 @media screen and (min-width: 767px) {
@@ -1190,7 +1378,6 @@ hr {
   .price__cards{
     grid-template-columns: repeat(3, 280px);
     column-gap: 3.5rem;
-    padding-block: 3.5rem 4rem;
   }
 
   .contact__container {
