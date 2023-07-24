@@ -14,6 +14,10 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+
     <title>MathIA</title>
 </head>
 
@@ -37,6 +41,10 @@
 
                     <li class="nav__item">
                         <a href="#pricing" class="nav__link">Precios</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#testimonios" class="nav__link">Testimonios</a>
                     </li>
 
                     <li class="nav__item">
@@ -94,7 +102,7 @@
                 <div class="about__data">
                     <span class="section__subtitle">Sobre nosotros</span>
                     <h2 class="section__title about__title">
-                            ¿Quienes somos? 🤖
+                        ¿Quienes somos? 🤖
                     </h2>
 
                     <p class="about__description">
@@ -102,7 +110,7 @@
                         procesamiento de lenguaje natural para comprender e interpretar las necesidades de los
                         clientes sin requerir selección de opciones predefinidas. Con MathIA, los usuarios pueden
                         comunicar sus necesidades de manera fluida, como si estuvieran hablando con un agente de
-                        servicio al cliente humano, pero en este caso, se trata de una inteligencia artificial.                        
+                        servicio al cliente humano, pero en este caso, se trata de una inteligencia artificial.
                     </p>
                 </div>
 
@@ -224,27 +232,31 @@
 
         <!--================== TESTIMONIOS ==================-->
 
-        <section class="testimonials section">
+        <section class="testimonials section" id="testimonios">
 
             <div class="testimonials__data  container">
                 <span class="section__subtitle">Testimonios</span>
-                <h2 class="section__title"> Orientados a tu negocio</h2>
-                <p class="testimonials__description">Nuestros planes te ofrecen opciones económicas y eficientes que se
-                    adaptan perfectamente a tus necesidades, brindándote un excelente balance entre costo y
-                    beneficios.</p>
+                <h2 class="section__title"> Como ayudamos a nuestros clientes</h2>
+                <p class="testimonials__description">¡Descubre cómo nuestro producto ha hecho realidad los sueños de
+                    nuestros clientes! En esta sección de testimonios, las historias hablan por sí mismas, mostrando
+                    cómo hemos transformado vidas y superado expectativas. Únete a la comunidad de éxito y deja que sus
+                    experiencias te inspiren a alcanzar lo extraordinario.</p>
 
             </div>
 
-            <div class="container carrousel__content">
+            <div class="container testimonial__container">
+                <div class="testimonial mySwiper">
+                    <div class="testi-content swiper-wrapper">
+                        <div class="slide swiper-slide">
+                            <div class="contenido">
+                                <img src="assets/img/logo_testimonials_1.jpg" alt="" class="image" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                                    saepe provident dolorem a quaerat quo error facere nihil deleniti
+                                    eligendi ipsum adipisci, fugit, architecto amet asperiores
+                                    doloremque deserunt eum nemo.
+                                </p>
 
-                <div class="wrapper">
-                    <i id="left" class="icono-btn fa-solid fa-angle-left"></i>
-                    <ul class="carousel">
-                        <li class="card">
-                            <div class="pictures">
-                                <div class="img">
-                                    <img src="assets/img/logo_testimonials_1.jpg" alt="img" draggable="false">
-                                </div>
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -252,32 +264,23 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                            </div>
 
-                            <span class="description">
-                                "In some form, by injected humour, or randomised words which don't
-                                look even slightly believable."
-                            </span>
-
-
-                            <div class="comment-author">
-                                <img src="assets/img/chica.jpeg" alt="person-logo" class="comment-author-img" />
-
-                                <div class="comment-info">
-                                    <div class="name">
-                                        <span>Maria Gonzales</span>
-                                    </div>
-                                    <div class="puesto">
-                                        <span>Founder & CEO, Twenty Moda</span>
-                                    </div>
+                                <div class="details">
+                                    <span class="name">Marnie Lotter</span>
+                                    <span class="job">Web Developer</span>
                                 </div>
                             </div>
-                        </li>
-                        <li class="card">
-                            <div class="pictures">
-                                <div class="img">
-                                    <img src="assets/img/about-sushi.png" alt="img" draggable="false">
-                                </div>
+                        </div>
+                        <div class="slide swiper-slide">
+                            <div class="contenido">
+                                <img src="assets/img/logo_testimonials_1.jpg" alt="" class="image" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                                    saepe provident dolorem a quaerat quo error facere nihil deleniti
+                                    eligendi ipsum adipisci, fugit, architecto amet asperiores
+                                    doloremque deserunt eum nemo.
+                                </p>
+
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -285,32 +288,23 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                            </div>
 
-                            <span class="description">
-                                "There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form."
-                            </span>
-
-
-                            <div class="comment-author">
-                                <img src="assets/img/chica.jpeg" alt="person-logo" class="comment-author-img" />
-
-                                <div class="comment-info">
-                                    <div class="name">
-                                        <span>Byron Hsu</span>
-                                    </div>
-                                    <div class="puesto">
-                                        <span>CEO, Early Found</span>
-                                    </div>
+                                <div class="details">
+                                    <span class="name">Marnie Lotter</span>
+                                    <span class="job">Web Developer</span>
                                 </div>
                             </div>
-                        </li>
-                        <li class="card">
-                            <div class="pictures">
-                                <div class="img">
-                                    <img src="assets/img/logo_testimonials_1.jpg" alt="img" draggable="false">
-                                </div>
+                        </div>
+                        <div class="slide swiper-slide">
+                            <div class="contenido">
+                                <img src="assets/img/logo_testimonials_1.jpg" alt="" class="image" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                                    saepe provident dolorem a quaerat quo error facere nihil deleniti
+                                    eligendi ipsum adipisci, fugit, architecto amet asperiores
+                                    doloremque deserunt eum nemo.
+                                </p>
+
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -318,32 +312,22 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                            </div>
 
-                            <span class="description">
-                                "by injected humour, or randomised words which don't
-                                look even slightly believable."
-                            </span>
-
-
-                            <div class="comment-author">
-                                <img src="assets/img/chica.jpeg" alt="person-logo" class="comment-author-img" />
-
-                                <div class="comment-info">
-                                    <div class="name">
-                                        <span>Maria Gonzales</span>
-                                    </div>
-                                    <div class="puesto">
-                                        <span>Founder & CEO, Twenty Moda</span>
-                                    </div>
+                                <div class="details">
+                                    <span class="name">Marnie Lotter</span>
+                                    <span class="job">Web Developer</span>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                    <i id="right" class="icono-btn fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next nav-btn"></div>
+                    <div class="swiper-button-prev nav-btn"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
+
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--==================== CONTACT ====================-->
 
@@ -356,7 +340,8 @@
                     </h2>
 
                     <p class="contact__description">
-                        Automatiza tu atención al cliente con nuestro chatbot de IA. Contáctanos por <b>Whatsapp</b> 🤖📱.
+                        Automatiza tu atención al cliente con nuestro chatbot de IA. Contáctanos por <b>Whatsapp</b>
+                        🤖📱.
                     </p>
 
                     <a href="https://wa.link/d725f1" target="_blank" class="button contact__button">
@@ -384,9 +369,9 @@
                 </a>
 
                 <p class="footer__description">
-                    Food for the body is not <br>
-                    enough. There must be food <br>
-                    for the soul.
+                    Conversaciones fluidas, <br>
+                    respuestas rápidas, <br>
+                    personalización asombrosa.
                 </p>
             </div>
 
@@ -396,13 +381,13 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#" class="footer__link">Nosotros</a>
+                            <a href="#about" class="footer__link">Nosotros</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">Precios</a>
+                            <a href="#pricing" class="footer__link">Precios</a>
                         </li>
                         <li>
-                            <a href="#" class="footer__link">Testimonios</a>
+                            <a href="#testimonios" class="footer__link">Testimonios</a>
                         </li>
 
                     </ul>
@@ -413,7 +398,7 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#" class="footer__link">Contacto</a>
+                            <a href="#contact" class="footer__link">Contacto</a>
                         </li>
                         <li>
                             <a href="#" class="footer__link">Preguntas frecuentes</a>
