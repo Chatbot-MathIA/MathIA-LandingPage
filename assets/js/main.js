@@ -118,7 +118,7 @@ const sr = ScrollReveal({
     //reset: true //Animations repeat
 })
 
-sr.reveal(`.home__img, .newsletter__container, .footer__logo, .footer__description, .footer__content, .footer__info
+sr.reveal(`.chatbot, .newsletter__container, .footer__logo, .footer__description, .footer__content, .footer__info
 , .pricing__data, .wrapper__title`)
 sr.reveal(`.home__data`, { origin: 'bottom' })
 sr.reveal(`.about__data, .recently__data, .testimonials__data`, { origin: 'left' })
