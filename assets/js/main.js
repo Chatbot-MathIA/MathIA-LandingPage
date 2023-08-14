@@ -78,7 +78,18 @@ const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 
 const logoHeader = document.getElementById('logo');
-const logoHome = document.getElementById('logoHome');
+const logoFooter = document.getElementById('logoFooter');
+
+//Leaf images
+
+const leaf1 = document.getElementById('leaf-1');
+const leaf21 = document.getElementById('leaf-2-1');
+const leaf22 = document.getElementById('leaf-2-2');
+const leaf31 = document.getElementById('leaf-3-1');
+const leaf32 = document.getElementById('leaf-3-2');
+const leaf41 = document.getElementById('leaf-4-1');
+const leaf42 = document.getElementById('leaf-4-2');
+const leaf43 = document.getElementById('leaf-4-3');
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
@@ -105,7 +116,15 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 
     logoHeader.src = [getCurrentTheme() === 'dark' ? "assets/img/mathia_horizontal_darkmode.png" : "assets/img/mathia_horizontal.png"];
-    logoHome.src = [getCurrentTheme() === 'dark' ? "assets/img/logo_solo_2.png" : "assets/img/logo_solo_1.png"];
+    logoFooter.src = logoHeader.src;
+    leaf1.src = [getCurrentTheme() === 'dark' ? "assets/img/dark-leaf-branch-1.png" : "assets/img/leaf-branch-1.png"];
+    leaf21.src = [getCurrentTheme() === 'dark' ? "assets/img/dark-leaf-branch-2.png" : "assets/img/leaf-branch-2.png"];
+    leaf22.src = leaf21.src;
+    leaf31.src = [getCurrentTheme() === 'dark' ? "assets/img/dark-leaf-branch-3.png" : "assets/img/leaf-branch-3.png"];
+    leaf32.src = leaf31.src;
+    leaf41.src = [getCurrentTheme() === 'dark' ? "assets/img/dark-leaf-branch-4.png" : "assets/img/leaf-branch-4.png"];
+    leaf42.src = leaf41.src;
+    leaf43.src = leaf41.src;
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
